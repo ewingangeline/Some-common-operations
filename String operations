@@ -1,0 +1,64 @@
+Concatenate var = "Hello"; var ="$var World"
+
+
+Length         ${#string} OR expr length $string  ex.${#name}
+
+Extract a substring   exho ${string:position}      ex.${name:3}
+
+Replacing substring ${string/substring/replacement}  ex.${name/ch/xx}
+
+Compound operations
+
+-AND: -a
+-OR: -operations
+
+
+COMPARISONS
+
+if [ "$varA" -eq "$varB"]
+
+Equal: -eq OR ===
+
+Not equal: -ne OR!=
+
+Greater than, greater than or equal to: -gt OR >, -ge OR >=
+
+Less than, less than or equal to: -It OR <, -le OR <=
+
+Not Null( empty string): -n
+
+Null (empty string): -z
+
+LOGIC
+
+Looping -for
+for var in list
+                                              Examples   
+                                              for i in 12345
+                                              for i in $(seq 1 5)
+do
+  Statment (string)
+  done
+
+  Flow Control
+
+  if condition    if name=Micheal
+  then               then<run some command>
+    commands          If name doesn't equal  Micheal...
+     elif condition     elif name=Mary
+     then                then <run some command>
+             commands   if name doesn't equal Micheal or Mary...
+    else                   else
+           commands        then < run some command>
+           fi                   fi
+
+
+          BASH if CONDITIONS
+
+          Expression                                      Description
+          -d file                                            True if file exists
+          -e file                                            True if fie exists and is a regular file
+          -f file                                             True is string is a null (empty) string
+          -z string                                            True if string is a null (empty) string
+          -stringA = stringB                                    True if string is not a null (empty string)
+          stringA!= stringB                                      True if strings are not equal
